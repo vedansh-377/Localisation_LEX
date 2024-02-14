@@ -1,0 +1,15 @@
+server.port=8081
+---
+files:
+  - path: src/main/java/com/aws/spring/BotExample.java
+    services:
+      - lex
+  - path: src/main/java/com/aws/spring/LexController.java
+    services:
+      - lex
+  - path: src/main/java/com/aws/spring/LexResponse.java
+    services:
+      - lex
+  - path: src/main/java/com/aws/spring/TranslationService.java
+    services:
+      - lex

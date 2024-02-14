@@ -1,0 +1,32 @@
+<!-- chat-result.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Chat Result</title>
+    <!-- Your head content -->
+</head>
+<body>
+<h2>Chat Result</h2>
+
+<!-- Display user input -->
+<p>User Input: <span th:text="${userInput}"></span></p>
+
+<!-- Display bot response -->
+<p>Bot Response: <span th:text="${botResponse}"></span></p>
+
+<!-- Check if buttons are present -->
+<div th:if="${buttons}">
+    <div class="buttons">
+        <h3>Buttons:</h3>
+        <!-- Iterate over buttons and display them -->
+        <span th:each="button : ${buttons}">
+            <!-- Access the elements of the list directly -->
+            <button th:text="${button}"></button>
+        </span>
+    </div>
+</div>
+
+<!-- Your existing content -->
+
+</body>
+</html>
